@@ -1,0 +1,38 @@
+﻿@model int[]
+
+@{
+    int count = 100;
+
+    List<string> names = new List<string>() { "Shaiq", "Konul", "Ceyhun" };
+}
+
+<h1>Home page</h1>
+
+<section id="home">
+    <div class="navbar">
+        <h3 style="color:red">Started backend</h3>
+        <span>@count</span>
+
+         <ul>
+            @for(int i = 0;i < 15;i++)
+            {
+                <li>@count</li>
+                count++;
+            }
+        </ul>
+
+        @foreach(var item in names)
+        {
+            <h1>@item</h1>
+        }
+
+        @foreach (var item in Model)
+        {
+            <h1>@item</h1>
+        }
+    </div>
+</section>
+
+<script>
+    console.log("sasasaas")
+</script>
